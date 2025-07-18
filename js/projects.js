@@ -3,29 +3,49 @@
 // Project Data
 const projectsData = {
   1: {
-    title: "Number Guessing Game",
-    duration: "2 weeks",
-    teamSize: "Solo Project",
-    role: "Full Stack Developer",
-    technologies: ["Python", "Tkinter", "Random Module", "GUI Design"],
-    githubLink: "https://github.com/yourusername/number-guessing-game",
-    liveLink: "#",
-    description: "An interactive number guessing game built with Python and Tkinter. The game features multiple difficulty levels, score tracking, and an intuitive graphical user interface. Players can choose from easy, medium, or hard difficulty levels, each with different number ranges and attempt limits.",
-    challenges: "The main challenge was creating an engaging user experience while maintaining clean code structure. I had to implement proper input validation, create responsive GUI elements, and ensure the game logic was both challenging and fair. Additionally, implementing a scoring system that encourages replay value required careful balance testing.",
-    features: [
-      "Multiple difficulty levels (Easy, Medium, Hard)",
-      "Score tracking and high score system",
-      "Intuitive graphical user interface",
-      "Input validation and error handling",
-      "Hint system to guide players",
-      "Restart and reset functionality"
-    ],
-    images: [
-      "images/project-4.png",
-      "images/project-4.png",
-      "images/project-4.png"
-    ]
-  },
+  "title": "QuizifyAI – Smart Quiz Builder with AI Integration",
+  "duration": "2 months",
+  "teamSize": "Solo Project",
+  "role": "Full Stack Developer",
+  "technologies": [
+    "React.js",
+    "Django",
+    "PostgreSQL",
+    "OpenAI API",
+    "RESTful APIs",
+    "JWT Authentication"
+  ],
+  "githubLink": "https://github.com/Misbahkk/backend-Quize-app",
+  "liveLink": "https://github.com/Misbahkk/backend-Quize-app",
+  "description": "QuizifyAI is an AI-powered quiz platform where users can generate quizzes, get smart suggestions, edit questions, and analyze results – all in one place. It includes secure authentication, real-time participation, and detailed result analysis. Built with a clean architecture, it integrates GPT APIs to automate quiz creation and supports user-friendly features for both participants and quiz creators.",
+  "challenges": "Integrating AI with quiz logic, maintaining real-time result updates, and managing user access levels with secure authentication were major challenges. Ensuring a clean codebase across the React-Django stack and designing intuitive user experiences for both creators and participants also required careful architectural planning.",
+  "features": [
+    "AI-powered quiz generation (topic and difficulty based)",
+    "Secure login/signup with email verification & password reset",
+    "Quiz editing with smart suggestions using GPT",
+    "Real-time quiz participation and scoring",
+    "Live poll & result updates for participants",
+    "Detailed result analysis with performance charts",
+    "Quiz management (edit, delete, track responses)",
+    "Clean RESTful APIs tested with Postman",
+    "Full-stack automation and code organization"
+  ],
+  "images": [
+    "images/quize_images/quiz_1.png",
+    "images/quize_images/quiz_2.png",
+    "images/quize_images/quiz_3.png",
+    "images/quize_images/quiz_4.png",
+    "images/quize_images/quiz_5.png",
+    "images/quize_images/quiz_6.png",
+    "images/quize_images/quiz_7.png",
+    "images/quize_images/quiz_8.png",
+    "images/quize_images/quiz_9.png",
+    "images/quize_images/quiz_10.png",
+    "images/quize_images/quiz_11.png",
+    
+  ]
+}
+,
   2: {
     title: "ChatWithFriends App",
     duration: "1 month",
@@ -322,19 +342,25 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize animation manager
   const animationManager = new AnimationManager();
 
-  // Add smooth scrolling for navigation links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
+// ✅ Add smooth scrolling ONLY for in-page anchor links (not external links)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+
+    // Only handle if href is a valid CSS selector (i.e., not just "#")
+    if (href && href.length > 1) {
+      const target = document.querySelector(href);
       if (target) {
+        e.preventDefault();
         target.scrollIntoView({
           behavior: 'smooth',
           block: 'start'
         });
       }
-    });
+    }
   });
+});
+
 
   // Add loading states for project buttons
   document.querySelectorAll('.view-project').forEach(button => {
