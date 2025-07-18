@@ -1,0 +1,368 @@
+/* Enhanced Projects Section Styles */
+
+/* Theme Variables */
+:root {
+  --primary-color: #2c98f0;
+  --secondary-color: #667eea;
+  --accent-color: #764ba2;
+  --text-color: #333;
+  --bg-color: #fff;
+  --card-bg: #fff;
+  --border-color: #e0e0e0;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  --text-color: #e0e0e0;
+  --bg-color: #1a1a1a;
+  --card-bg: #2d2d2d;
+  --border-color: #404040;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+#theme-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Projects Grid */
+.projects-grid {
+  margin-top: 2rem;
+}
+
+/* Project Cards */
+.project-card {
+  background: var(--card-bg);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  height: 100%;
+  border: 1px solid var(--border-color);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Project Image Container */
+.project-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.1);
+}
+
+/* Project Overlay */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-actions {
+  text-align: center;
+}
+
+.project-actions .btn {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: white;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.project-actions .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(44, 152, 240, 0.4);
+}
+
+/* Project Content */
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-content h3 {
+  color: var(--text-color);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.project-tech {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-description {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+/* Modal Styles */
+.modal-content {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--border-color);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border-radius: 15px 15px 0 0;
+}
+
+.modal-header .close {
+  color: white;
+  opacity: 0.8;
+}
+
+.modal-header .close:hover {
+  opacity: 1;
+}
+
+/* Carousel Styles */
+.carousel-inner {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 20px;
+}
+
+/* Project Details */
+.project-details {
+  padding: 1rem;
+}
+
+.project-details h3 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.project-meta p {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.project-meta strong {
+  color: var(--primary-color);
+}
+
+.tech-stack h4 {
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.tech-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin: 2px;
+  font-weight: 500;
+}
+
+.project-links .btn {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-links .btn-outline-dark {
+  border-color: var(--text-color);
+  color: var(--text-color);
+}
+
+.project-links .btn-outline-dark:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+/* Case Study */
+.project-case-study {
+  padding: 1rem;
+}
+
+.project-case-study h4 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.project-case-study p {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-case-study ul {
+  color: var(--text-color);
+}
+
+.project-case-study li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-card {
+    margin-bottom: 2rem;
+  }
+  
+  .project-image {
+    height: 200px;
+  }
+  
+  .modal-dialog {
+    margin: 1rem;
+  }
+  
+  .carousel-item img {
+    height: 250px;
+  }
+  
+  .project-details {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .project-content {
+    padding: 1rem;
+  }
+  
+  .project-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .carousel-item img {
+    height: 200px;
+  }
+  
+  .project-links .btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: var(--transition);
+}
+
+.fade-in.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Loading Animation */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}

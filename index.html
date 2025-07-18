@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -354,72 +356,230 @@
     		<div class="row justify-content-center pb-5">
           <div class="col-md-12 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Our Projects</h2>
-            <p>Embark on a journey through our portfolio, where innovation meets execution, far beyond the realms of ordinary, reaching the heights of creativity and functionality.</p>
+            <h2 class="mb-4">My Projects</h2>
+            <p>Embark on a journey through my portfolio, where innovation meets execution, far beyond the realms of ordinary, reaching the heights of creativity and functionality.</p>
           </div>
         </div>
-    		<div class="row">
-    			<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-4.png);">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="#">Number Gassing &amp; Game</a></h3>
-	    					<span>Python</span>
-	    				</div>
-    				</div>
-  				</div>
-  				<div class="col-md-8">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-5.png);">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="#">ChatWithFriends &amp; App</a></h3>
-	    					<span>Python(Djongo)</span>
-	    				</div>
-    				</div>
-  				</div>
+        
+        <!-- Theme Toggle Button -->
+        <div class="row justify-content-center mb-4">
+          <div class="col-auto">
+            <button id="theme-toggle" class="btn btn-outline-primary">
+              <i class="fas fa-moon"></i> Dark Mode
+            </button>
+          </div>
+        </div>
 
-    			<div class="col-md-8">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-1.png);">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="#">HTML PAGE</a></h3>
-	    					<span>Web Page</span>
-	    				</div>
-    				</div>
+        <!-- Projects Grid -->
+        <div class="row projects-grid">
+          <!-- Project 1: Number Guessing Game -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-card" data-project="1">
+              <div class="project-image">
+                <img src="images/project-4.png" alt="Number Guessing Game">
+                <div class="project-overlay">
+                  <div class="project-actions">
+                    <button class="btn btn-primary btn-sm view-project" data-project="1">
+                      <i class="fas fa-eye"></i> View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3>Number Guessing Game</h3>
+                <p class="project-tech">Python</p>
+                <p class="project-description">Interactive number guessing game with multiple difficulty levels</p>
+              </div>
+            </div>
+          </div>
 
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-6.png)">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="#">Employee Registration</a></h3>
-	    					<span>Python (Django)</span>
-	    				</div>
-    				</div>
-    			</div>
-    			<div class="col-md-4">
-    				<div class="row">
-    					<div class="col-md-12">
-		    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-2.png);">
-		    					<div class="overlay"></div>
-			    				<div class="text text-center p-4">
-			    					<h3><a href="#">Weather App</a></h3>
-			    					<span>Python</span>
-			    				</div>
-		    				</div>
-	    				</div>
-	    				<div class="col-md-12">
-		    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-3.png);">
-		    					<div class="overlay"></div>
-			    				<div class="text text-center p-4">
-			    					<h3><a href="#">TO-DO-LIST &amp; User registration</a></h3>
-			    					<span>Python (Django)</span>
-			    				</div>
-		    				</div>
-	    				</div>
-    				</div>
-    			</div>
-    		</div>
+          <!-- Project 2: ChatWithFriends App -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-card" data-project="2">
+              <div class="project-image">
+                <img src="images/project-5.png" alt="ChatWithFriends App">
+                <div class="project-overlay">
+                  <div class="project-actions">
+                    <button class="btn btn-primary btn-sm view-project" data-project="2">
+                      <i class="fas fa-eye"></i> View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3>ChatWithFriends App</h3>
+                <p class="project-tech">Python (Django)</p>
+                <p class="project-description">Real-time chat application with user authentication and messaging</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: HTML Portfolio -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-card" data-project="3">
+              <div class="project-image">
+                <img src="images/project-1.png" alt="HTML Portfolio">
+                <div class="project-overlay">
+                  <div class="project-actions">
+                    <button class="btn btn-primary btn-sm view-project" data-project="3">
+                      <i class="fas fa-eye"></i> View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3>Portfolio Website</h3>
+                <p class="project-tech">HTML, CSS, JavaScript</p>
+                <p class="project-description">Responsive portfolio website with modern design and animations</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Weather App -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-card" data-project="4">
+              <div class="project-image">
+                <img src="images/project-2.png" alt="Weather App">
+                <div class="project-overlay">
+                  <div class="project-actions">
+                    <button class="btn btn-primary btn-sm view-project" data-project="4">
+                      <i class="fas fa-eye"></i> View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3>Weather App</h3>
+                <p class="project-tech">Python</p>
+                <p class="project-description">Weather forecasting application with location-based services</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Todo List -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-card" data-project="5">
+              <div class="project-image">
+                <img src="images/project-3.png" alt="Todo List App">
+                <div class="project-overlay">
+                  <div class="project-actions">
+                    <button class="btn btn-primary btn-sm view-project" data-project="5">
+                      <i class="fas fa-eye"></i> View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3>Todo List & User Registration</h3>
+                <p class="project-tech">Python (Django)</p>
+                <p class="project-description">Task management system with user authentication and CRUD operations</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Employee Registration -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-card" data-project="6">
+              <div class="project-image">
+                <img src="images/project-6.png" alt="Employee Registration">
+                <div class="project-overlay">
+                  <div class="project-actions">
+                    <button class="btn btn-primary btn-sm view-project" data-project="6">
+                      <i class="fas fa-eye"></i> View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3>Employee Registration System</h3>
+                <p class="project-tech">Python (Django)</p>
+                <p class="project-description">Employee management system with registration and data handling</p>
+              </div>
+            </div>
+          </div>
+        </div>
     	</div>
     </section>
+
+    <!-- Project Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModalLabel">Project Details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <!-- Image Carousel -->
+              <div class="col-lg-8">
+                <div id="projectCarousel" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner" id="carousel-images">
+                    <!-- Images will be populated by JavaScript -->
+                  </div>
+                  <a class="carousel-control-prev" href="#projectCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#projectCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+              
+              <!-- Project Details -->
+              <div class="col-lg-4">
+                <div class="project-details">
+                  <h3 id="modal-project-title">Project Title</h3>
+                  <div class="project-meta">
+                    <p><strong>Duration:</strong> <span id="modal-duration">-</span></p>
+                    <p><strong>Team Size:</strong> <span id="modal-team-size">-</span></p>
+                    <p><strong>My Role:</strong> <span id="modal-role">-</span></p>
+                  </div>
+                  
+                  <div class="tech-stack">
+                    <h4>Technologies Used</h4>
+                    <div id="modal-tech-stack">
+                      <!-- Tech badges will be populated by JavaScript -->
+                    </div>
+                  </div>
+                  
+                  <div class="project-links mt-4">
+                    <a href="#" id="modal-github-link" class="btn btn-outline-dark btn-sm mr-2" target="_blank">
+                      <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="#" id="modal-live-link" class="btn btn-primary btn-sm" target="_blank">
+                      <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Project Description -->
+            <div class="row mt-4">
+              <div class="col-12">
+                <div class="project-case-study">
+                  <h4>Project Overview</h4>
+                  <p id="modal-description">Project description will be loaded here...</p>
+                  
+                  <h4>Challenges Faced</h4>
+                  <p id="modal-challenges">Challenges will be loaded here...</p>
+                  
+                  <h4>Key Features</h4>
+                  <ul id="modal-features">
+                    <!-- Features will be populated by JavaScript -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <section class="ftco-section" id="blog-section">
@@ -698,6 +858,7 @@
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
     
 
   </body>
