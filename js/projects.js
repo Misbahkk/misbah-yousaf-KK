@@ -47,29 +47,44 @@ const projectsData = {
 }
 ,
   2: {
-    title: "ChatWithFriends App",
-    duration: "1 month",
-    teamSize: "Solo Project",
-    role: "Full Stack Developer",
-    technologies: ["Python", "Django", "WebSocket", "HTML/CSS", "JavaScript", "SQLite"],
-    githubLink: "https://github.com/yourusername/chat-with-friends",
-    liveLink: "https://your-chat-app.herokuapp.com",
-    description: "A real-time chat application built with Django that allows users to create accounts, join chat rooms, and communicate with friends in real-time. The application features user authentication, message persistence, and a modern, responsive interface.",
-    challenges: "Implementing real-time messaging was the biggest challenge. I had to learn WebSocket technology and integrate it with Django's framework. Managing user sessions, ensuring message delivery, and creating a scalable database structure for storing chat history required extensive research and testing.",
-    features: [
-      "Real-time messaging with WebSocket",
-      "User authentication and registration",
-      "Multiple chat rooms support",
-      "Message history and persistence",
-      "Responsive design for mobile devices",
-      "Online/offline user status indicators"
-    ],
-    images: [
-      "images/project-5.png",
-      "images/project-5.png",
-      "images/project-5.png"
-    ]
-  },
+  "title": "Full-Stack E-commerce Web App with Cart, Coupons & Secure Checkout",
+  "duration": "1.5 months",
+  "teamSize": "Solo Project",
+  "role": "Full Stack Developer",
+  "technologies": [
+    "React.js",
+    "Django",
+    "PostgreSQL",
+    "RESTful API",
+    "JWT Authentication"
+  ],
+  "githubLink": "https://github.com/yourusername/ecommerce-app",
+  "liveLink": "#",
+  "description": "An end-to-end e-commerce platform built using Django and React, featuring secure authentication, real-time cart updates, coupon-based discounts, and an integrated checkout flow. Users can browse products, manage their carts, apply discount codes, and place orders securely. Admins can handle inventory and track orders through a dedicated dashboard.",
+  "challenges": "Ensuring a smooth cart experience with live quantity updates and discount logic was challenging. Implementing secure payment integration and email-based account verification required careful attention to security and user experience. Building a scalable backend structure for admin control and product management also added depth to the architecture.",
+  "features": [
+    "User signup/login with email verification",
+    "Cart system with quantity management",
+    "Coupon system for dynamic discounts",
+    "Secure payment and checkout integration",
+    "Order history and status tracking",
+    "Admin dashboard to manage products and orders",
+    "RESTful API structure with JWT-based authentication",
+    "Clean UI with responsive design in React",
+    "Database design and integration using PostgreSQL"
+  ],
+  "images": [
+    "images/e-commerce_pic/image_1.png",
+    "images/e-commerce_pic/image_2.png",
+    "images/e-commerce_pic/image_3.png",
+    "images/e-commerce_pic/image_4.png",
+    "images/e-commerce_pic/image_5.png",
+    "images/e-commerce_pic/image_6.png",
+
+
+  ]
+}
+,
   3: {
     title: "Portfolio Website",
     duration: "3 weeks",
@@ -168,52 +183,21 @@ const projectsData = {
   }
 };
 
-// Theme Management
+// Theme Management - Only Dark Theme
 class ThemeManager {
   constructor() {
-    this.currentTheme = localStorage.getItem('theme') || 'light';
-    this.init();
+    this.applyDarkTheme(); // Always apply dark theme
   }
 
-  init() {
-    this.applyTheme();
-    this.setupToggleButton();
-  }
-
-  applyTheme() {
-    if (this.currentTheme === 'dark') {
-      document.body.classList.add('dark-theme');
-      this.updateToggleButton('light');
-    } else {
-      document.body.classList.remove('dark-theme');
-      this.updateToggleButton('dark');
-    }
-  }
-
-  toggleTheme() {
-    this.currentTheme = this.currentTheme === 'light' ? 'dark' : 'light';
-    localStorage.setItem('theme', this.currentTheme);
-    this.applyTheme();
-  }
-
-  updateToggleButton(nextTheme) {
-    const button = document.getElementById('theme-toggle');
-    if (button) {
-      if (nextTheme === 'dark') {
-        button.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
-      } else {
-        button.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
-      }
-    }
-  }
-
-  setupToggleButton() {
-    const toggleButton = document.getElementById('theme-toggle');
-    if (toggleButton) {
-      toggleButton.addEventListener('click', () => this.toggleTheme());
-    }
+  applyDarkTheme() {
+    document.body.classList.add('dark-theme');
   }
 }
+
+// Initialize theme when page loads
+document.addEventListener('DOMContentLoaded', () => {
+  new ThemeManager();
+});
 
 // Project Modal Manager
 class ProjectModalManager {
